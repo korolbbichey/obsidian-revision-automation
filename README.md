@@ -38,7 +38,7 @@ A Python CLI tool that auto-generates structured A-Level revision notes directly
 
 1. **Clone the repository:**
    ```bash
-   git clone <repo-url>
+   git clone https://github.com/korolbbichey/obsidian-revision-automation.git
    cd obsidian-revision-gen
    ```
 
