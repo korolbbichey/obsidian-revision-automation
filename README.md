@@ -9,6 +9,7 @@ A Python CLI tool that auto-generates structured A-Level revision notes directly
 - Verification pass checks each note against the specification before writing
 - Incremental generation — skips existing files, only generates what's missing
 - Wikilink structure designed for Obsidian's graph view (tree shape, no circular links)
+- Hierarchy caching — saves the generated topic tree to disk so re-runs skip the API call
 - Rich CLI output with progress bars and coloured logging
 
 ## Vault Structure
@@ -38,7 +39,7 @@ A Python CLI tool that auto-generates structured A-Level revision notes directly
 
 1. **Clone the repository:**
    ```bash
-   git clone <repo-url>
+   git clone https://github.com/korolbbichey/obsidian-revision-automation.git
    cd obsidian-revision-gen
    ```
 
@@ -72,6 +73,9 @@ python main.py generate --all
 # Overwrite existing files (re-generate everything)
 python main.py generate --subject "A-Level Mathematics" --overwrite
 
+# Force regenerate the topic hierarchy (ignores cache)
+python main.py generate --subject "A-Level Mathematics" --refresh-hierarchy
+
 # List configured subjects
 python main.py list
 ```
@@ -79,6 +83,10 @@ python main.py list
 ### Incremental Updates
 
 Without `--overwrite`, the tool skips any file that already exists. This means you can safely re-run the command to fill in missing notes (e.g. after rate limiting) without regenerating what's already done.
+
+### Hierarchy Caching
+
+The first time you generate notes for a subject, the topic hierarchy is saved to `.cache/`. On subsequent runs the cached hierarchy is loaded instantly, saving an API call. Use `--refresh-hierarchy` to force a fresh generation (e.g. after updating the syllabus in `subjects.yaml`).
 
 ## Configuration
 
@@ -120,10 +128,18 @@ Tests mock the API client — no real API calls are made.
 │   └── subjects.yaml        ← subject definitions with syllabus text
 ├── tests/
 │   └── test_writer.py       ← tests for file writing and path handling
+├── .cache/                  ← cached hierarchy JSON files (git-ignored)
 ├── .env.example             ← template for environment variables
 ├── requirements.txt
 └── CLAUDE.md                ← development instructions
 ```
+## Important note
+Due to the deletion of the filename truncation, you can get an error "Errno 22" that represents a filename that is too long. To avoid this issue, on Windows platform, you can run this command in the admin PowerShell:
+```
+New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem" -Name "LongPathsEnabled" -Value 1 -PropertyType DWORD -Force
+```
+> [!WARNING]
+> If you are unsure about using a PowerShell command, do not. It can break your OS. No joke.
 
 ## Note Format
 
