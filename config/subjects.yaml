@@ -1,0 +1,209 @@
+subjects:
+  - name: "A-Level Mathematics"
+    exam_board: "Edexcel"
+    specification_code: "9MA0"
+    specification_url: "https://qualifications.pearson.com/en/qualifications/edexcel-a-levels/mathematics-2017.html"
+    syllabus: |
+      PURE MATHEMATICS:
+
+      Chapter 1 – Proof:
+        1.1: Proof by deduction
+        1.2: Proof by exhaustion
+        1.3: Disproof by counter-example
+        1.4: Proof by contradiction (including irrationality of √2 and infinity of primes)
+
+      Chapter 2 – Algebra and Functions:
+        2.1: Laws of indices for all rational exponents
+        2.2: Surds – simplification and rationalising the denominator
+        2.3: Quadratic functions – discriminant, completing the square, solving equations (including quadratics in a function of the unknown)
+        2.4: Simultaneous equations in two variables – elimination and substitution (including one linear and one quadratic)
+        2.5: Linear and quadratic inequalities – solving algebraically and graphically; set notation for solution sets
+        2.6: Polynomials – expanding, factorising, algebraic division, factor theorem; simplifying rational expressions
+        2.7: Graphs of functions – polynomials (cubics/quartics), modulus of a linear function, y = a/x and y = a/x², asymptotes, proportional relationships
+        2.8: Composite and inverse functions; domain and range; graph of y = f⁻¹(x)
+        2.9: Transformations of graphs – y = af(x), y = f(x) + a, y = f(x + a), y = f(ax) and combinations thereof
+        2.10: Partial fractions – denominators up to squared linear terms, no more than 3 terms, constant or linear numerators
+        2.11: Functions in modelling – context, limitations and refinements
+
+      Chapter 3 – Coordinate Geometry:
+        3.1: Equation of a straight line – various forms; parallel and perpendicular conditions; straight-line models in context
+        3.2: Coordinate geometry of the circle – equation forms; completing the square; properties (angle in semicircle, perpendicular from centre to chord, radius–tangent perpendicularity)
+        3.3: Parametric equations – curves and conversion between parametric and Cartesian forms
+        3.4: Parametric equations in modelling
+
+      Chapter 4 – Sequences and Series:
+        4.1: Binomial expansion of (a + bx)ⁿ for positive integer n; extend to rational n including validity condition |bx/a| < 1
+        4.2: Sequences defined by nth-term formulae or recurrence relations xₙ₊₁ = f(xₙ); increasing, decreasing and periodic sequences
+        4.3: Sigma notation for sums of series
+        4.4: Arithmetic sequences and series – nth term, sum to n terms (including proof and sum of first n naturals)
+        4.5: Geometric sequences and series – nth term, sum of finite series, sum to infinity for |r| < 1
+        4.6: Sequences and series in modelling
+
+      Chapter 5 – Trigonometry:
+        5.1: Definitions of sine, cosine and tangent for all arguments; sine and cosine rules; area of triangle (½ab sinC); radians; arc length s = rθ and sector area A = ½r²θ
+        5.2: Small angle approximations – sin θ ≈ θ, cos θ ≈ 1 − θ²/2, tan θ ≈ θ (θ in radians)
+        5.3: Graphs of sin, cos and tan – symmetry and periodicity; exact values of sin and cos for 0, π/6, π/4, π/3, π/2, π and multiples; exact values of tan for 0, π/6, π/4, π/3, π and multiples
+        5.4: Secant, cosecant and cotangent; arcsin, arccos and arctan – definitions, graphs, domains and ranges
+        5.5: Trigonometric identities – tan θ = sin θ/cos θ; sin²θ + cos²θ = 1; sec²θ = 1 + tan²θ; cosec²θ = 1 + cot²θ
+        5.6: Compound angle formulae for sin(A ± B), cos(A ± B), tan(A ± B); double angle formulae; harmonic form r cos(θ ± α) and r sin(θ ± α)
+        5.7: Solving trigonometric equations in a given interval – including quadratic and multiple-angle equations
+        5.8: Constructing proofs of trigonometric identities
+        5.9: Trigonometric functions in context – vectors, kinematics, forces
+
+      Chapter 6 – Exponentials and Logarithms:
+        6.1: Function aˣ and its graph (a > 0, a ≠ 1); function eˣ and its graph
+        6.2: Gradient of eᵏˣ equals keᵏˣ; rationale for exponential models
+        6.3: Definition of log_a x as inverse of aˣ; natural logarithm ln x as inverse of eˣ; solving equations of the form eᵃˣ⁺ᵇ = p and ln(ax + b) = q
+        6.4: Laws of logarithms – product, quotient and power rules; log_a a = 1
+        6.5: Solving equations of the form aˣ = b (including change of base)
+        6.6: Logarithmic graphs to linearise and estimate parameters in y = axⁿ and y = kbˣ
+        6.7: Exponential growth and decay in modelling – limitations and refinements
+
+      Chapter 7 – Differentiation:
+        7.1: Derivative as gradient of tangent and rate of change; sketching the gradient function; second derivative; convexity, concavity and points of inflection; differentiation from first principles for small positive integer powers of x and for sin x and cos x
+        7.2: Differentiating xⁿ (rational n); eᵏˣ and aᵏˣ; sin kx, cos kx, tan kx; ln x
+        7.3: Tangents and normals; stationary points (maxima, minima, points of inflection); identifying increasing and decreasing functions; curve sketching
+        7.4: Product rule, quotient rule and chain rule; connected rates of change; differentiating cosec x, sec x, cot x; inverse functions via dy/dx = 1/(dx/dy)
+        7.5: Implicit differentiation; parametric differentiation (first derivative only); tangents and normals for implicit/parametric curves
+        7.6: Setting up simple first-order differential equations in pure and applied contexts
+
+      Chapter 8 – Integration:
+        8.1: Fundamental Theorem of Calculus; integration as the reverse of differentiation; constant of integration
+        8.2: Integrating xⁿ (n ≠ −1); eᵏˣ; 1/x; sin kx and cos kx; using trigonometric identities to integrate (e.g. sin²x, tan²x, cos²3x)
+        8.3: Definite integrals; area under a curve; area between two curves (including parametric curves)
+        8.4: Integration as the limit of a sum
+        8.5: Integration by substitution (single substitution); integration by parts (including repeated application, excluding reduction formulae)
+        8.6: Integration using partial fractions with linear denominators
+        8.7: Solving first-order separable differential equations analytically; particular solutions; sketching solution families
+        8.8: Interpreting differential equation solutions in context; validity for large t; links to kinematics
+
+      Chapter 9 – Numerical Methods:
+        9.1: Locating roots by change of sign on a continuous function; understanding when change of sign fails
+        9.2: Iterative methods xₙ₊₁ = f(xₙ); cobweb and staircase diagrams
+        9.3: Newton–Raphson method; understanding failure near points of small gradient
+        9.4: Trapezium rule for numerical integration; over- and under-estimation relative to curve shape
+        9.5: Numerical methods applied to problems in context
+
+      Chapter 10 – Vectors:
+        10.1: Vectors in 2D and 3D; column vector notation; i, j, k unit vectors
+        10.2: Magnitude and direction of a vector; converting between component and magnitude/direction form; unit vectors
+        10.3: Vector addition diagrammatically and algebraically; scalar multiplication; triangle and parallelogram laws; parallel vectors
+        10.4: Position vectors; distance between two points in 2D and 3D
+        10.5: Vectors in problem solving – pure mathematics and applied contexts (forces, velocity, displacement)
+
+
+      STATISTICS:
+
+      Chapter 1 – Statistical Sampling:
+        1.1: Population and sample; using samples for informal inference; census vs sample advantages and disadvantages
+        1.2: Sampling techniques – simple random, stratified, systematic, quota and opportunity sampling; selecting and critiquing techniques in context
+
+      Chapter 2 – Data Presentation and Interpretation:
+        2.1: Diagrams for single-variable data – histograms (area = frequency), frequency polygons, box plots (including outliers), cumulative frequency diagrams
+        2.2: Scatter diagrams and regression lines – explanatory and response variables; interpolation and dangers of extrapolation; correlation vs causation; linearising using logarithms for y = axⁿ and y = kbˣ
+        2.3: Measures of central tendency – mean, median, mode; measures of variation – variance, standard deviation, range, interpercentile ranges; calculating standard deviation from summary statistics; coding
+        2.4: Outliers – identification, interpretation, cleaning data (missing values, errors)
+
+      Chapter 3 – Probability:
+        3.1: Mutually exclusive and independent events; Venn diagrams; tree diagrams; set notation; P(A ∩ B) = P(A)P(B) for independent events
+        3.2: Conditional probability – P(A|B) = P(A ∩ B)/P(B); two-way tables; addition rule P(A ∪ B) = P(A) + P(B) − P(A ∩ B); multiplication rule P(A ∩ B) = P(A)P(B|A)
+        3.3: Modelling with probability; critiquing assumptions and considering more realistic alternatives
+
+      Chapter 4 – Statistical Distributions:
+        4.1: Discrete probability distributions; binomial distribution B(n, p) – conditions, calculating individual and cumulative probabilities using a calculator
+        4.2: Normal distribution N(μ, σ²) – shape, symmetry, points of inflection at μ ± σ; calculating probabilities; Normal approximation to binomial with continuity correction
+        4.3: Selecting appropriate distributions for context; recognising when binomial or Normal models may be inappropriate
+
+      Chapter 5 – Statistical Hypothesis Testing:
+        5.1: Language of hypothesis testing – null hypothesis, alternative hypothesis, significance level, test statistic, 1-tail and 2-tail tests, critical value, critical region, acceptance region, p-value; product moment correlation coefficient r; interpreting r using critical values or p-values
+        5.2: Hypothesis test for proportion in a binomial distribution; interpreting results in context; significance level as probability of incorrectly rejecting H₀
+        5.3: Hypothesis test for mean of a Normal distribution with known variance; using X̄ ~ N(μ, σ²/n) and standardising; interpreting results in context
+
+
+      MECHANICS:
+
+      Chapter 6 – Quantities and Units:
+        6.1: SI fundamental quantities and units – length, time, mass; derived quantities and units – velocity, acceleration, force, weight, moment; unit conversion (e.g. km h⁻¹ to m s⁻¹)
+
+      Chapter 7 – Kinematics:
+        7.1: Language of kinematics – position, displacement, distance travelled, velocity, speed, acceleration (distance and speed must be positive)
+        7.2: Displacement–time graphs (gradient = velocity); velocity–time graphs (gradient = acceleration, area = displacement)
+        7.3: Constant acceleration formulae (suvat) – derivation and use; extend to 2D using vectors (v = u + at, r = ut + ½at²)
+        7.4: Calculus in kinematics – differentiation and integration of displacement, velocity and acceleration; extend to 2D vector form
+        7.5: Projectile motion under gravity – derivation of time of flight, range, greatest height and equation of path
+
+      Chapter 8 – Forces and Newton's Laws:
+        8.1: Concept of force; Newton's first law; force types – normal reaction, tension, thrust/compression, resistance
+        8.2: Newton's second law (F = ma) – motion in a straight line; forces in two perpendicular directions or as 2D vectors; resolving forces on inclined planes
+        8.3: Weight = mg; motion under gravity; g = 9.8 m s⁻² (g not universal – depends on location)
+        8.4: Newton's third law; equilibrium of a particle; connected particles and smooth pulleys; resolving coplanar forces in 2D equilibrium
+        8.5: Adding forces; resultant forces; dynamics in a plane; resolving into components or using vector diagrams
+        8.6: Friction model F ≤ μR; coefficient of friction; limiting friction (F = μR when sliding); statics with friction
+
+      Chapter 9 – Moments:
+        9.1: Moments in simple static contexts; equilibrium of rigid bodies; problems involving parallel and non-parallel coplanar forces (e.g. ladder problems)
+
+  - name: "A-Level Economics"
+    exam_board: "Edexcel"
+    specification_code: "9EC0"
+    specification_url: "https://qualifications.pearson.com/en/qualifications/edexcel-a-levels/economics-2015.html"
+    syllabus: |
+      MICROECONOMICS
+        Theme 1 – Introduction to Markets and Market Failure
+          1.1 Nature of economics
+          1.2 How markets work
+          1.3 Market failure
+          1.4 Government intervention
+
+      MACROECONOMICS
+        Theme 2 – The UK Economy — Performance and Policies
+          2.1 Measures of economic performance
+          2.2 Aggregate demand
+          2.3 Aggregate supply
+          2.4 National income
+          2.5 Economic growth
+          2.6 Macroeconomic objectives and policy
+
+  - name: "A-Level Computer Science"
+    exam_board: "AQA"
+    specification_code: "7517"
+    specification_url: "https://www.aqa.org.uk/subjects/computer-science-and-it/a-level/computer-science-7516-7517"
+    syllabus: |
+      PAPER 1 – Computer Systems
+        1.1 The characteristics of contemporary processors, input, output and storage devices
+          1.1.1 Structure and function of the processor
+          1.1.2 Types of processor
+          1.1.3 Input, output and storage
+        1.2 Software and software development
+          1.2.1 Systems software
+          1.2.2 Applications generation
+          1.2.3 Software development
+          1.2.4 Types of programming language
+        1.3 Exchanging data
+          1.3.1 Compression, encryption and hashing
+          1.3.2 Databases
+          1.3.3 Networks
+          1.3.4 Web technologies
+        1.4 Data types, data structures and algorithms
+          1.4.1 Data types
+          1.4.2 Data structures
+          1.4.3 Boolean algebra
+        1.5 Legal, moral, cultural and ethical issues
+          1.5.1 Computing related legislation
+          1.5.2 Moral and ethical issues
+
+      PAPER 2 – Algorithms and Programming
+        2.1 Elements of computational thinking
+          2.1.1 Thinking abstractly
+          2.1.2 Thinking ahead
+          2.1.3 Thinking procedurally
+          2.1.4 Thinking logically
+          2.1.5 Thinking concurrently
+        2.2 Problem solving and programming
+          2.2.1 Programming techniques
+          2.2.2 Computational methods
+        2.3 Algorithms
+          2.3.1 Graph and tree traversal
+          2.3.2 Sorting algorithms
+          2.3.3 Searching algorithms
+          2.3.4 Optimisation algorithms

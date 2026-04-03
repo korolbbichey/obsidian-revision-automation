@@ -1,0 +1,4 @@
+hierarchy_model: "gemini-2.0-flash"
+notes_model: "gemini-2.0-flash"
+verify_model: "gemini-2.0-flash"
+api_delay_seconds: 4
