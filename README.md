@@ -129,8 +129,8 @@ Due to the deletion of the filename truncation, you can get an error "Errno 22" 
 ```
 New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem" -Name "LongPathsEnabled" -Value 1 -PropertyType DWORD -Force
 ```
-[!WARNING]
-If you are unsure about using a PowerShell command, do not. It can break Windows.
+> [!WARNING]
+> If you are unsure about using a PowerShell command, do not. It can break Windows.
 
 ## Note Format
 
