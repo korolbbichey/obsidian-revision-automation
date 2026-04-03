@@ -9,19 +9,12 @@ from rich.console import Console
 console = Console()
 
 
-MAX_FILENAME_LEN = 100
-
-
 def safe_name(name: str) -> str:
     """Strip characters that are invalid in file/folder names.
 
-    Preserves spaces. Truncates to MAX_FILENAME_LEN to avoid
-    hitting Windows 260-char path limits.
+    Preserves spaces. Never truncates.
     """
-    cleaned = re.sub(r'[/\\:?*"<>|]', "", name)
-    if len(cleaned) > MAX_FILENAME_LEN:
-        cleaned = cleaned[:MAX_FILENAME_LEN].rstrip()
-    return cleaned
+    return re.sub(r'[/\\:?*"<>|]', "", name)
 
 
 def write_hub_note(

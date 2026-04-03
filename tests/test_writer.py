@@ -24,11 +24,9 @@ class TestSafeName:
     def test_backslash_stripped(self):
         assert safe_name("path\\to\\file") == "pathtofile"
 
-    def test_truncates_long_names(self):
+    def test_no_truncation(self):
         long_name = "A" * 300
-        result = safe_name(long_name)
-        assert len(result) == 100
-        assert result == "A" * 100
+        assert safe_name(long_name) == long_name
 
 
 class TestWriteHubNote:
