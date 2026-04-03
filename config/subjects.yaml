@@ -169,41 +169,515 @@ subjects:
     specification_code: "7517"
     specification_url: "https://www.aqa.org.uk/subjects/computer-science-and-it/a-level/computer-science-7516-7517"
     syllabus: |
-      PAPER 1 – Computer Systems
-        1.1 The characteristics of contemporary processors, input, output and storage devices
-          1.1.1 Structure and function of the processor
-          1.1.2 Types of processor
-          1.1.3 Input, output and storage
-        1.2 Software and software development
-          1.2.1 Systems software
-          1.2.2 Applications generation
-          1.2.3 Software development
-          1.2.4 Types of programming language
-        1.3 Exchanging data
-          1.3.1 Compression, encryption and hashing
-          1.3.2 Databases
-          1.3.3 Networks
-          1.3.4 Web technologies
-        1.4 Data types, data structures and algorithms
-          1.4.1 Data types
-          1.4.2 Data structures
-          1.4.3 Boolean algebra
-        1.5 Legal, moral, cultural and ethical issues
-          1.5.1 Computing related legislation
-          1.5.2 Moral and ethical issues
+      A-LEVEL COMPUTER SCIENCE (AQA 7517):
 
-      PAPER 2 – Algorithms and Programming
-        2.1 Elements of computational thinking
-          2.1.1 Thinking abstractly
-          2.1.2 Thinking ahead
-          2.1.3 Thinking procedurally
-          2.1.4 Thinking logically
-          2.1.5 Thinking concurrently
-        2.2 Problem solving and programming
-          2.2.1 Programming techniques
-          2.2.2 Computational methods
-        2.3 Algorithms
-          2.3.1 Graph and tree traversal
-          2.3.2 Sorting algorithms
-          2.3.3 Searching algorithms
-          2.3.4 Optimisation algorithms
+      Chapter 4.1 – Fundamentals of Programming:
+
+        4.1.1 Programming:
+          4.1.1.1: Data types – integer, real/float, Boolean, character, string,
+                  date/time, pointer/reference, records, arrays; user-defined types
+          4.1.1.2: Programming concepts – variable/constant declaration, assignment,
+                  iteration (definite and indefinite, condition at start or end),
+                  selection, subroutines; nested selection and iteration;
+                  meaningful identifier names
+          4.1.1.3: Arithmetic operations – addition, subtraction, multiplication,
+                  real/float division, integer division (inc. remainders),
+                  exponentiation, rounding, truncation
+          4.1.1.4: Relational operations – equal to, not equal to, less than,
+                  greater than, less than or equal to, greater than or equal to
+          4.1.1.5: Boolean operations – NOT, AND, OR, XOR
+          4.1.1.6: Constants and variables – differences between them;
+                  advantages of named constants
+          4.1.1.7: String-handling – length, position, substring, concatenation,
+                  character ↔ character code, string conversion operations
+                  (string↔integer, string↔float, string↔date/time)
+          4.1.1.8: Random number generation
+          4.1.1.9: Exception handling – concept and use in a programming language
+          4.1.1.10: Subroutines – definition, named out-of-line block, advantages
+          4.1.1.11: Parameters – passing data within programs; subroutines with interfaces
+          4.1.1.12: Returning values from subroutines
+          4.1.1.13: Local variables – existence and scope within subroutines;
+                    advantages of using local variables
+          4.1.1.14: Global variables – contrast with local variables
+          4.1.1.15: Stack frames – storing return addresses, parameters and local
+                    variables during subroutine calls
+          4.1.1.16: Recursive techniques – general and base cases, mechanism,
+                    solving simple problems using recursion
+
+        4.1.2 Programming Paradigms:
+          4.1.2.1: Programming paradigms – procedural and object-oriented;
+                  characteristics and experience of each
+          4.1.2.2: Procedural-oriented programming – structured approach, hierarchy
+                  charts, advantages of structured approach
+          4.1.2.3: Object-oriented programming – class, object, instantiation,
+                  encapsulation, inheritance, aggregation, composition,
+                  polymorphism, overriding; OOP design principles (encapsulate
+                  what varies, favour composition over inheritance, program to
+                  interfaces); writing OOP programs (abstract/virtual/static
+                  methods, public/private/protected specifiers);
+                  drawing and interpreting UML class diagrams
+
+
+      Chapter 4.2 – Fundamentals of Data Structures:
+
+        4.2.1 Data Structures and Abstract Data Types:
+          4.2.1.1: Concept of data structures
+          4.2.1.2: Single- and multi-dimensional arrays (or equivalent)
+          4.2.1.3: Fields, records and files – read/write text files and binary files
+          4.2.1.4: Abstract data types – queue, stack, graph, tree, hash table,
+                  dictionary, vector; static vs dynamic structures (advantages
+                  and disadvantages); creation and maintenance of queues
+                  (linear, circular, priority), stacks and hash tables
+
+        4.2.2 Queues:
+          4.2.2.1: Queue operations – add item, remove item, test for empty,
+                  test for full; applied to linear, circular and priority queues
+
+        4.2.3 Stacks:
+          4.2.3.1: Stack operations – push, pop, peek/top, test for empty,
+                  test for full
+
+        4.2.4 Graphs:
+          4.2.4.1: Graphs – graph, weighted graph, vertex/node, edge/arc,
+                  undirected graph, directed graph; adjacency matrix vs
+                  adjacency list representation; comparing both representations;
+                  typical uses of graphs
+
+        4.2.5 Trees:
+          4.2.5.1: Trees – connected undirected graph with no cycles; rooted trees
+                  (root, parent-child relationships); binary trees (at most two
+                  children per node); typical uses of rooted trees
+
+        4.2.6 Hash Tables:
+          4.2.6.1: Hash tables – concept and uses; applying simple hashing
+                  algorithms; collisions and handling via rehashing
+
+        4.2.7 Dictionaries:
+          4.2.7.1: Dictionaries – key-value pairs; simple applications (e.g.
+                  information retrieval); using dictionary data structures in code
+
+        4.2.8 Vectors:
+          4.2.8.1: Vectors – list, function and geometric representations;
+                  notations (list, n-vector over ℝ, function interpretation);
+                  dictionary representation; 1-D array representation;
+                  visualising as an arrow; vector addition (translation) and
+                  scalar-vector multiplication (scaling); convex combination;
+                  dot/scalar product and its applications (e.g. angle between vectors)
+
+
+      Chapter 4.3 – Fundamentals of Algorithms:
+
+        4.3.1 Graph Traversal:
+          4.3.1.1: Breadth-first search (BFS) – trace, O(?) complexity,
+                  typical use: shortest path on unweighted graph;
+                  Depth-first search (DFS) – trace, typical use: navigating a maze
+
+        4.3.2 Tree Traversal:
+          4.3.2.1: Pre-order traversal – trace and use (e.g. copying a tree);
+                  In-order traversal – trace and use (e.g. BST ascending output);
+                  Post-order traversal – trace and use (e.g. infix→RPN conversion,
+                  emptying a tree)
+
+        4.3.3 Reverse Polish Notation:
+          4.3.3.1: Converting infix expressions to RPN and vice versa;
+                  why RPN is used (eliminates brackets, stack-based evaluation);
+                  use in stack-based interpreters (e.g. Postscript, bytecode)
+
+        4.3.4 Searching Algorithms:
+          4.3.4.1: Linear search – trace, O(n) time complexity
+          4.3.4.2: Binary search – trace, O(log n) time complexity
+          4.3.4.3: Binary tree search – trace, O(log n) time complexity
+
+        4.3.5 Sorting Algorithms:
+          4.3.5.1: Bubble sort – trace, O(n²) time complexity
+          4.3.5.2: Merge sort – trace, O(n log n) time complexity; divide and conquer
+
+        4.3.6 Optimisation Algorithms:
+          4.3.6.1: Dijkstra's shortest path algorithm – understand and trace;
+                  applications of shortest path algorithms
+
+
+      Chapter 4.4 – Theory of Computation:
+
+        4.4.1 Abstraction and Automation:
+          4.4.1.1: Problem-solving – developing and checking solutions to logic problems
+          4.4.1.2: Following and writing algorithms – definition of algorithm;
+                  pseudo-code with sequence, assignment, selection, iteration;
+                  hand-tracing; converting pseudo-code to code; arguing correctness
+                  and efficiency
+          4.4.1.3: Abstraction – representational abstraction (removing unnecessary
+                  detail); abstraction by generalisation/categorisation ('is a kind of')
+          4.4.1.4: Information hiding – hiding details not essential to an object's
+                  characteristics
+          4.4.1.5: Procedural abstraction – abstracting a computational method
+                  (a procedure)
+          4.4.1.6: Functional abstraction – hiding the computational method to
+                  yield a function
+          4.4.1.7: Data abstraction – hiding how data is represented to allow new
+                  data types to be constructed (e.g. stack as array + pointer)
+          4.4.1.8: Problem abstraction/reduction – removing detail until problem
+                  reduces to one already solved
+          4.4.1.9: Decomposition – breaking a problem into sub-problems
+                  (procedural decomposition)
+          4.4.1.10: Composition – combining procedures into compound procedures;
+                    combining data objects into compound data (e.g. tree structure)
+          4.4.1.11: Automation – creating algorithms, implementing in code and data
+                    structures, executing; relationship between models and problem-solving
+
+        4.4.2 Regular Languages:
+          4.4.2.1: Finite state machines (FSMs) with and without output –
+                  state transition diagrams and tables; FSMs with no output
+                  and with output (Mealy machines only)
+          4.4.2.2: Maths for regular expressions – sets (notation, set comprehension,
+                  empty set Ø); finite/infinite/countably infinite sets; cardinality;
+                  Cartesian product; subset, proper subset, countable set;
+                  set operations (membership, union, intersection, difference)
+          4.4.2.3: Regular expressions – describing sets in shorthand; metacharacters
+                  (* + ? | ()); writing and using regular expressions for string
+                  matching; equivalence between regular expressions and FSMs;
+                  converting between FSMs and regular expressions
+          4.4.2.4: Regular language – a language representable by a regular expression
+                  or accepted by a FSM
+
+        4.4.3 Context-Free Languages:
+          4.4.3.1: Backus-Naur Form (BNF) / syntax diagrams – checking syntax;
+                  formulating simple production rules; why BNF can represent
+                  languages not expressible with regular expressions
+
+        4.4.4 Classification of Algorithms:
+          4.4.4.1: Comparing algorithms – complexity as a function of problem size;
+                  time-wise and space-wise efficiency
+          4.4.4.2: Maths for Big-O notation – functions as mappings (domain →
+                  co-domain); linear, polynomial, exponential, logarithmic functions;
+                  permutations and n factorial
+          4.4.4.3: Order of complexity – Big-O notation; constant O(1),
+                  logarithmic O(log n), linear O(n), polynomial O(nᵏ),
+                  exponential O(kⁿ) time; deriving time complexity of an algorithm
+          4.4.4.4: Limits of computation – algorithmic complexity and hardware
+                  impose limits on what is computable
+          4.4.4.5: Classification of algorithmic problems – tractable (polynomial
+                  or better) vs intractable (no polynomial solution); heuristic methods
+                  for intractable problems
+          4.4.4.6: Computable and non-computable problems – some problems
+                  cannot be solved algorithmically
+          4.4.4.7: Halting problem – description (not proof); significance:
+                  demonstrates existence of problems unsolvable by computer
+
+        4.4.5 A Model of Computation:
+          4.4.5.1: Turing machine – structure (finite states, finite alphabet, infinite
+                  tape, read-write head); start states and halting states;
+                  transition function vs state transition diagram;
+                  representing and hand-tracing transition rules;
+                  importance of Universal Turing Machine to computation theory
+
+
+      Chapter 4.5 – Fundamentals of Data Representation:
+
+        4.5.1 Number Systems:
+          4.5.1.1: Natural numbers – ℕ = {0, 1, 2, 3, …}
+          4.5.1.2: Integer numbers – ℤ = {…, -2, -1, 0, 1, 2, …}
+          4.5.1.3: Rational numbers – ℚ (fractions of integers, includes integers)
+          4.5.1.4: Irrational numbers – cannot be written as a fraction (e.g. √2)
+          4.5.1.5: Real numbers – ℝ (includes natural, rational and irrational)
+          4.5.1.6: Ordinal numbers – numerical positions of objects in an ordered set
+          4.5.1.7: Counting and measurement – natural numbers for counting,
+                  real numbers for measurement
+
+        4.5.2 Number Bases:
+          4.5.2.1: Number bases – decimal (base 10), binary (base 2),
+                  hexadecimal (base 16); converting between all three;
+                  hex as shorthand for binary
+
+        4.5.3 Units of Information:
+          4.5.3.1: Bits and bytes – bit as fundamental unit; byte = 8 bits;
+                  2ⁿ values representable with n bits
+          4.5.3.2: Units – binary prefixes (kibi Ki 2¹⁰, mebi Mi 2²⁰, gibi Gi 2³⁰,
+                  tebi Ti 2⁴⁰) and decimal prefixes (kilo k 10³, mega M 10⁶,
+                  giga G 10⁹, tera T 10¹²)
+
+        4.5.4 Binary Number System:
+          4.5.4.1: Unsigned binary – difference from signed; range 0 to 2ⁿ-1;
+                  convert between unsigned binary and decimal
+          4.5.4.2: Unsigned binary arithmetic – addition and multiplication of
+                  unsigned binary integers
+          4.5.4.3: Signed binary using two's complement – representing positive
+                  and negative integers; subtraction using two's complement;
+                  calculating range for n bits; converting between signed binary
+                  and decimal
+          4.5.4.4: Numbers with a fractional part – fixed point binary (given number
+                  of bits); floating point binary (mantissa + exponent, both in
+                  two's complement); converting decimal↔binary and vice versa
+          4.5.4.5: Rounding errors – why fixed and floating point representations
+                  may be inaccurate; numbers not exactly representable in binary
+          4.5.4.6: Absolute and relative errors – calculating absolute and relative
+                  errors; comparing for large, small and near-one magnitudes
+          4.5.4.7: Range and precision – comparing fixed point vs floating point
+                  in terms of range, precision and speed
+          4.5.4.8: Normalisation of floating point – why normalisation is used;
+                  normalising un-normalised numbers (positive and negative mantissas)
+          4.5.4.9: Underflow and overflow – explanation and circumstances
+
+        4.5.5 Information Coding Systems:
+          4.5.5.1: Character form of decimal digit – vs pure binary representation
+          4.5.5.2: ASCII and Unicode – description of both; why Unicode was introduced
+          4.5.5.3: Error checking and correction – parity bits, majority voting,
+                  checksums, check digits
+
+        4.5.6 Representing Images, Sound and Other Data:
+          4.5.6.1: Bit patterns – how they represent graphics and sound
+          4.5.6.2: Analogue and digital – difference in data and signals
+          4.5.6.3: Analogue/digital conversion – principles of ADC and DAC;
+                  ADC use with analogue sensors; DAC use for digital audio output
+          4.5.6.4: Bitmapped graphics – representation; resolution, colour depth,
+                  size in pixels; storage calculation (size × colour depth);
+                  metadata (width, height, colour depth)
+          4.5.6.5: Vector graphics – representation as lists of objects with
+                  properties; using primitives to create a simple vector graphic
+          4.5.6.6: Vector vs bitmapped graphics – advantages, disadvantages
+                  and appropriate uses of each
+          4.5.6.7: Digital representation of sound – sample resolution,
+                  sampling rate, Nyquist theorem; calculating sound sample sizes
+          4.5.6.8: MIDI – purpose, event messages, advantages over sampled audio
+          4.5.6.9: Data compression – why files are compressed; lossless vs lossy
+                  (advantages and disadvantages); lossless techniques: run length
+                  encoding (RLE) and dictionary-based methods
+          4.5.6.10: Encryption – definition; Caesar cipher (apply, decrypt, why
+                    easily cracked); Vernam cipher/one-time pad (apply, decrypt,
+                    perfect security); comparing Vernam with computationally
+                    secure ciphers
+
+
+      Chapter 4.6 – Fundamentals of Computer Systems:
+
+        4.6.1 Hardware and Software:
+          4.6.1.1: Relationship between hardware and software – definitions
+                  of hardware and software
+          4.6.1.2: Classification of software – system software vs application
+                  software; need for and attributes of different types
+          4.6.1.3: System software – operating systems, utility programs,
+                  libraries, translators (compiler, assembler, interpreter)
+          4.6.1.4: Role of an OS – hiding hardware complexity; resource management
+                  (processors, memory, I/O devices among competing processes)
+
+        4.6.2 Classification of Programming Languages:
+          4.6.2.1: Language classification – low-level (machine code, assembly)
+                  vs high-level (imperative); describe machine code and assembly;
+                  advantages/disadvantages vs high-level; meaning of
+                  'imperative high-level language'
+
+        4.6.3 Types of Program Translator:
+          4.6.3.1: Assembler, compiler and interpreter – roles; differences between
+                  compilation and interpretation; when each is appropriate;
+                  bytecode as intermediate output and its subsequent use;
+                  source code vs object (executable) code
+
+        4.6.4 Logic Gates:
+          4.6.4.1: Truth tables for NOT, AND, OR, XOR, NAND, NOR (ANSI/IEEE symbols);
+                  drawing and interpreting logic gate circuits; completing truth
+                  tables for circuits; writing Boolean expressions for circuits;
+                  drawing circuits from Boolean expressions; half-adder and
+                  full-adder circuits (trace logic, construct half-adder);
+                  edge-triggered D-type flip-flop as a memory unit
+
+        4.6.5 Boolean Algebra:
+          4.6.5.1: Boolean identities and De Morgan's laws – manipulating and
+                  simplifying Boolean expressions
+
+
+      Chapter 4.7 – Fundamentals of Computer Organisation and Architecture:
+
+        4.7.1 Internal Hardware Components:
+          4.7.1.1: Components and their relationships – processor, main memory,
+                  address bus, data bus, control bus, I/O controllers;
+                  concept of a bus; von Neumann vs Harvard architecture
+                  (differences and typical uses); addressable memory
+
+        4.7.2 The Stored Program Concept:
+          4.7.2.1: Stored program concept – machine code instructions in main memory
+                  fetched and executed serially; processor performs arithmetic
+                  and logical operations
+
+        4.7.3 Structure and Role of the Processor:
+          4.7.3.1: Processor components – ALU, control unit, clock,
+                  general-purpose registers, dedicated registers (program counter,
+                  current instruction register, memory address register,
+                  memory buffer register, status register)
+          4.7.3.2: Fetch-Execute cycle – stages (fetch, decode, execute);
+                  role of registers at each stage
+          4.7.3.3: Processor instruction set – instruction set is processor-specific;
+                  instructions = opcode + operand(s) (value, address or register)
+          4.7.3.4: Addressing modes – immediate (operand is the datum);
+                  direct (operand is the address of the datum)
+          4.7.3.5: Machine-code/assembly language operations – load, add, subtract,
+                  store, conditional and unconditional branching, compare,
+                  bitwise logical operators (AND, OR, NOT, XOR), shift right,
+                  shift left, halt; using mnemonics with immediate and direct addressing
+          4.7.3.6: Interrupts – role of interrupts and ISRs; effect on Fetch-Execute
+                  cycle; need to save volatile environment during servicing
+          4.7.3.7: Factors affecting processor performance – multiple cores,
+                  cache memory, clock speed, word length, address bus width,
+                  data bus width
+
+        4.7.4 External Hardware Devices:
+          4.7.4.1: Input and output devices – characteristics, purposes, suitability
+                  and principles of operation: barcode reader, digital camera,
+                  laser printer, RFID
+          4.7.4.2: Secondary storage devices – need for secondary storage;
+                  hard disk, optical disk, SSD (characteristics, purposes,
+                  suitability, principles of operation); comparing capacity
+                  and access speed for different applications
+
+
+      Chapter 4.8 – Consequences of Uses of Computing:
+
+        4.8.1 Individual, Social, Ethical, Legal and Cultural Issues:
+          4.8.1.1: Awareness of current moral, social, ethical, legal and cultural
+                  opportunities and risks of computing; transformations in capacity
+                  to monitor behaviour, amass/analyse personal data, and
+                  disseminate information; responsibilities of computer scientists
+                  and engineers in algorithms and code; software embedding moral
+                  and cultural values; scale of software and potential for great
+                  good or harm; challenges facing legislators in the digital age
+
+
+      Chapter 4.9 – Fundamentals of Communication and Networking:
+
+        4.9.1 Communication:
+          4.9.1.1: Communication methods – serial vs parallel transmission (and
+                  advantages of serial); synchronous vs asynchronous transmission;
+                  purpose of start and stop bits
+          4.9.1.2: Communication basics – baud rate, bit rate, bandwidth, latency,
+                  protocol; differentiating baud rate from bit rate; relationship
+                  between bit rate and bandwidth
+
+        4.9.2 Networking:
+          4.9.2.1: Network topology – physical star topology vs logical bus topology;
+                  differentiating and explaining their operation
+          4.9.2.2: Types of networking – peer-to-peer vs client-server; situations
+                  where each is used
+          4.9.2.3: Wireless networking – purpose of WiFi; components (wireless
+                  adapter, wireless access point); securing wireless networks
+                  (WPA/WPA2, SSID broadcast disabled, MAC allow list);
+                  CSMA/CA with and without RTS/CTS; purpose of SSID
+
+        4.9.3 The Internet:
+          4.9.3.1: Internet and how it works – structure of the Internet; packet
+                  switching and routers; components of a packet; router and gateway
+                  (definition and use); routing across the Internet; URLs;
+                  fully qualified domain names (FQDN), domain names, IP addresses;
+                  domain name organisation; DNS system; Internet registries
+          4.9.3.2: Internet security – firewall operation (packet filtering, proxy
+                  server, stateful inspection); symmetric and asymmetric encryption
+                  and key exchange; digital certificates and digital signatures;
+                  worms, trojans and viruses – vulnerabilities exploited;
+                  improved code quality, monitoring and protection as countermeasures
+
+        4.9.4 TCP/IP Protocol:
+          4.9.4.1: TCP/IP – four layers (application, transport, network, link);
+                  role of sockets; MAC addresses; well-known vs client ports
+          4.9.4.2: Standard application layer protocols – FTP, HTTP, HTTPS, POP3,
+                  SMTP, SSH; FTP with anonymous and non-anonymous access;
+                  SSH for remote management; using SSH to connect to remote ports
+                  for HTTP/SMTP/POP3; email server (retrieve and send);
+                  web server (serve pages as text); web browser (retrieve and render)
+          4.9.4.3: IP address structure – network identifier part and host identifier part
+          4.9.4.4: Subnet masking – subnets; subnet mask to identify network identifier
+          4.9.4.5: IP standards – IPv4 and IPv6; why IPv6 was introduced
+          4.9.4.6: Public and private IP addresses – routable vs non-routable
+          4.9.4.7: DHCP – purpose and function
+          4.9.4.8: NAT – basic concept and why it is used
+          4.9.4.9: Port forwarding – basic concept and why it is used
+          4.9.4.10: Client-server model – request/response model; WebSocket protocol
+                    (full-duplex persistent TCP connection between browser and server;
+                    when and why it is used); Web CRUD applications and REST
+                    (CRUD ↔ GET/POST/DELETE/PUT ↔ SELECT/INSERT/DELETE/UPDATE);
+                    JSON vs XML (readability, compactness, parse speed)
+          4.9.4.11: Thin-client vs thick-client computing – comparison and contrast
+
+
+      Chapter 4.10 – Fundamentals of Databases:
+
+        4.10.1 Conceptual Data Models and Entity-Relationship Modelling:
+          4.10.1.1: Producing a data model from requirements (multiple entities);
+                    entity-relationship diagrams; entity descriptions in the form
+                    Entity(Attribute1, Attribute2, …); underlining entity identifier
+
+        4.10.2 Relational Databases:
+          4.10.2.1: Concept of a relational database; definitions of attribute,
+                    primary key, composite primary key, foreign key
+
+        4.10.3 Database Design and Normalisation:
+          4.10.3.1: Normalising relations to third normal form (3NF); properties
+                    of 3NF; why databases are normalised
+
+        4.10.4 SQL:
+          4.10.4.1: Using SQL to retrieve, update, insert and delete data from
+                    multiple tables; using SQL to define a database table (DDL)
+
+        4.10.5 Client-Server Databases:
+          4.10.5.1: Simultaneous access for multiple clients; concurrent access
+                    control (record locks, serialisation, timestamp ordering,
+                    commitment ordering) to preserve integrity
+
+
+      Chapter 4.11 – Big Data:
+
+        4.11.1 Big Data:
+          4.11.1.1: Definition and characteristics – volume (too big for single server),
+                    velocity (streaming, milliseconds to respond), variety (structured,
+                    unstructured, text, multimedia); challenges of lack of structure;
+                    relational databases not appropriate for Big Data; need for
+                    machine learning to discern patterns; distributed processing
+                    across multiple machines; why functional programming suits
+                    distributed Big Data (immutable data, statelessness,
+                    higher-order functions, correct and distributable code);
+                    fact-based model for representing data; graph schema
+                    (nodes, edges, properties)
+
+
+      Chapter 4.12 – Fundamentals of Functional Programming:
+
+        4.12.1 Functional Programming Paradigm:
+          4.12.1.1: Function type – f: A → B; domain A and co-domain B;
+                    domain and co-domain as subsets of a data type
+          4.12.1.2: First-class objects – functions as first-class objects;
+                    can appear in expressions, be assigned to variables,
+                    passed as arguments, returned from function calls
+          4.12.1.3: Function application – applying a function to its arguments
+                    (e.g. add(3, 4)); function type notation (integer × integer → integer)
+          4.12.1.4: Partial function application – for one, two and three argument
+                    functions; currying notation (e.g. add: integer → integer → integer)
+          4.12.1.5: Composition of functions – g ○ f where f: A → B and g: B → C;
+                    applying f first then g to its result
+
+        4.12.2 Writing Functional Programs:
+          4.12.2.1: Functional language programs – practical experience in a
+                    functional language (Haskell, Standard ML, Scheme, Lisp or
+                    functional features of Python/F#/C#/Scala etc.);
+                    higher-order functions; map (apply function to each list element);
+                    filter (return elements satisfying a condition);
+                    reduce/fold (reduce list to single value using combining function)
+
+        4.12.3 Lists in Functional Programming:
+          4.12.3.1: List processing – head:tail representation; head is an element,
+                    tail is a list; empty list []; operations: return head, return tail,
+                    test for empty, return length, construct empty list,
+                    prepend item, append item; practical experience coding these
+                    operations in a functional language
+
+
+      Chapter 4.13 – Systematic Approach to Problem Solving:
+
+        4.13.1 Aspects of Software Development:
+          4.13.1.1: Analysis – defining the problem; establishing requirements via
+                    user interaction/prototyping/agile approach; creating a data model;
+                    using abstraction to model aspects of the external world
+          4.13.1.2: Design – designing data structures, algorithms, modular structure
+                    and user interface before implementation; iterative/agile/
+                    prototyping approach to design
+          4.13.1.3: Implementation – translating models and algorithms into data
+                    structures and code; iterative development; tackling critical
+                    path early; arguing correctness and efficiency
+          4.13.1.4: Testing – testing with normal, boundary and erroneous data;
+                    acceptance testing with intended users; user feedback evidence
+          4.13.1.5: Evaluation – criteria for evaluating a computer system
