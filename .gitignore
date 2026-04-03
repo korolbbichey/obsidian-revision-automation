@@ -37,6 +37,9 @@ ehthumbs.db
 *.swo
 *~
 
+# Cache
+.cache/
+
 # Claude Code
 .claude/
 CLAUDE.md

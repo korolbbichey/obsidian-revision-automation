@@ -1,5 +1,6 @@
 """CLI entrypoint for the Obsidian Revision Notes Generator."""
 
+import json
 import os
 import time
 from pathlib import Path
@@ -23,6 +24,7 @@ app = typer.Typer(help="Auto-generate structured A-Level revision notes into an 
 console = Console()
 
 CONFIG_DIR = Path(__file__).parent / "config"
+CACHE_DIR = Path(__file__).parent / ".cache"
 
 
 def _load_settings() -> dict:
@@ -74,6 +76,33 @@ def _get_client() -> genai.Client:
     return genai.Client(api_key=api_key)
 
 
+def _hierarchy_cache_path(subject_name: str) -> Path:
+    """Return the path to the cached hierarchy JSON for a subject."""
+    slug = subject_name.lower().replace(" ", "_")
+    return CACHE_DIR / f"{slug}_hierarchy.json"
+
+
+def _load_cached_hierarchy(subject_name: str) -> dict | None:
+    """Load a cached hierarchy from disk, or return None if not found."""
+    path = _hierarchy_cache_path(subject_name)
+    if not path.exists():
+        return None
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+        console.log(f"[cyan]Loaded cached hierarchy for {subject_name}[/cyan]")
+        return data
+    except (json.JSONDecodeError, OSError):
+        return None
+
+
+def _save_hierarchy_cache(subject_name: str, hierarchy: dict) -> None:
+    """Save a hierarchy dict to the cache directory."""
+    CACHE_DIR.mkdir(parents=True, exist_ok=True)
+    path = _hierarchy_cache_path(subject_name)
+    path.write_text(json.dumps(hierarchy, indent=2, ensure_ascii=False), encoding="utf-8")
+    console.log(f"[cyan]Cached hierarchy to {path.name}[/cyan]")
+
+
 def _api_call_with_retry(func, *args, max_retries: int = 3, **kwargs):
     """Wrap an API call with exponential backoff for rate limits."""
     for attempt in range(max_retries):
@@ -100,6 +129,7 @@ def _process_subject(
     vault_root: Path,
     settings: dict,
     overwrite: bool,
+    refresh_hierarchy: bool = False,
 ) -> None:
     """Generate hierarchy and notes for a single subject."""
     subject_name = subject["name"]
@@ -111,23 +141,30 @@ def _process_subject(
 
     console.rule(f"[bold]{subject_name}[/bold]")
 
-    # Step 1: Generate hierarchy
-    console.print("[bold]Generating topic hierarchy…[/bold]")
-    try:
-        hierarchy = _api_call_with_retry(
-            generate_hierarchy,
-            client,
-            subject_name,
-            syllabus,
-            settings["hierarchy_model"],
-        )
-    except (ValueError, APIError) as exc:
-        console.print(f"[red]Failed to generate hierarchy for {subject_name}: {exc}[/red]")
-        return
+    # Step 1: Load cached hierarchy or generate a new one
+    hierarchy = None
+    if not refresh_hierarchy:
+        hierarchy = _load_cached_hierarchy(subject_name)
 
     if hierarchy is None:
-        console.print(f"[red]Hierarchy generation failed for {subject_name} — skipping[/red]")
-        return
+        console.print("[bold]Generating topic hierarchy…[/bold]")
+        try:
+            hierarchy = _api_call_with_retry(
+                generate_hierarchy,
+                client,
+                subject_name,
+                syllabus,
+                settings["hierarchy_model"],
+            )
+        except (ValueError, APIError) as exc:
+            console.print(f"[red]Failed to generate hierarchy for {subject_name}: {exc}[/red]")
+            return
+
+        if hierarchy is None:
+            console.print(f"[red]Hierarchy generation failed for {subject_name} — skipping[/red]")
+            return
+
+        _save_hierarchy_cache(subject_name, hierarchy)
 
     # Step 2: Write hub notes and generate leaf notes
     chapters = hierarchy["chapters"]
@@ -228,6 +265,7 @@ def generate(
     subject: Optional[str] = typer.Option(None, help="Subject name to generate notes for"),
     all_subjects: bool = typer.Option(False, "--all", help="Generate notes for all subjects"),
     overwrite: bool = typer.Option(False, "--overwrite", help="Overwrite existing files"),
+    refresh_hierarchy: bool = typer.Option(False, "--refresh-hierarchy", help="Regenerate the topic hierarchy (ignores cache)"),
 ) -> None:
     """Generate revision notes for one or all configured subjects."""
     if not subject and not all_subjects:
@@ -249,7 +287,7 @@ def generate(
             raise typer.Exit(1)
 
     for subj in targets:
-        _process_subject(client, subj, vault_root, settings, overwrite)
+        _process_subject(client, subj, vault_root, settings, overwrite, refresh_hierarchy)
 
 
 @app.command()
