@@ -124,6 +124,13 @@ Tests mock the API client — no real API calls are made.
 ├── requirements.txt
 └── CLAUDE.md                ← development instructions
 ```
+## Important note
+Due to the deletion of the filename truncation, you can get an error "Errno 22" that represents a filename that is too long. To avoid this issue, on Windows platform, you can run this command in the admin PowerShell:
+```
+New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem" -Name "LongPathsEnabled" -Value 1 -PropertyType DWORD -Force
+```
+[!WARNING]
+If you are unsure about using a PowerShell command, do not. It can break Windows.
 
 ## Note Format
 
